@@ -1,0 +1,27 @@
+![verificarlo logo](https://avatars1.githubusercontent.com/u/12033642)
+
+# CONTENT
+
+# Verificarlo Basis
+To debug or optimize floating-point computation with Verificarlo, the first
+step is to compile your program with it. Verificarlo is built as a set of LLVM
+plugins; to compile a program with verificarlo you should use the _verificarlo_
+command instead of the usual _clang_, _icc_ or _gcc_.
+
+Once a program is compiled with Verificarlo, you can load various backends to
+simulate round-off noise or the effect of lower floating-point precisions. Backends are selected and configured by defining the _VFC\_BACKENDS_ environment variable.
+
+This tutorial will guide you through examples on how to use Verificarlo. 
+If necessary, you can access an online documentation at <https://github.com/verificarlo/verificarlo>.
+
+In this tutorial, we will use the docker container available at
+<https://hub.docker.com/r/verificarlo/verificarlo/>.
+To pull the latest container with verificarlo and start working with it on
+the tutorial workspace type the following commands,
+
+    $ wget <address of verificarlo-tutorial.tar.gz>
+    $ tar xzvf verificarlo-tutorial.tar.gz
+    $ cd verificarlo-tutorial/
+    $ docker pull verificarlo/verificarlo
+    $ docker run -v $PWD:/workdir -it verificarlo/verificarlo bash
+
