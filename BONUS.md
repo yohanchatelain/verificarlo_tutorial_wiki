@@ -1,6 +1,7 @@
 Example
 
 what is wrong with this program? Use verificarlo to analyse it.
+
 | exercice1.c |
 | -------- |
 ```C
@@ -19,3 +20,12 @@ int main(){
  return 0;
 }
 ```
+
+
+
+Understand that Verificarlo is intended to helps users to catch how a change on the input(s) and internal operations affects the output. Hence it also helps to determine how input error bars and internal operations become output error bars. 
+
+#
+Polynomial evaluation is a common source of computational error. Polynomials are frequently used for function interpolation in libraries or user codes. As we will see, different evaluations of the same polynomial do not have the same behavior in terms of performance or numerical accuracy.
+
+This tutorial uses the Tchebychev polynomial from ~\cite[pp.52-54]{parker1997monte}:
